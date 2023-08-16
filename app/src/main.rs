@@ -8,27 +8,23 @@ use log::LevelFilter;
 
 
 
-
+#[cfg(feature = "desktop")]
 fn main() {
-    // Init debug
     dioxus_logger::init(LevelFilter::Info).expect("failed to init logger");
-    
     dioxus_desktop::launch(app);
-    
 }
 
-
-
-
-
+#[cfg(feature = "web")]
+fn main() {
+    dioxus_logger::init(LevelFilter::Info).expect("failed to init logger");
+    dioxus_web::launch(app);
+}
 
 fn app(cx: Scope) -> Element {
     render!{
         Router::<Route> {}
     }
 }
-
-
 
 #[derive(Clone, Routable, Debug, PartialEq)]
 enum Route {
