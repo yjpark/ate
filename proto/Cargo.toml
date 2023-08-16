@@ -1,6 +1,6 @@
 [package]
 publish = false
-name = "ate_model"
+name = "ate_proto"
 version = "0.1.0"
 
 edition.workspace = true
@@ -9,23 +9,19 @@ homepage.workspace = true
 repository.workspace = true
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [features]
 serde = [
     "dep:serde",
-    "ate_proto/serde",
     "uuid/serde",
-    "dashmap/serde",
-    "edger_tree/serde",
+    "chrono/serde",
+    "chrono-tz/serde",
+    "indexmap/serde",
 ]
 
 
 [dependencies]
-ate_proto = { workspace = true }
-
-tracing = { workspace = true }
 uuid = { workspace = true }
-dashmap = { workspace = true }
-deref-derive = { workspace = true }
-edger_tree = { workspace = true, features = [ "dashmap" ]}
-serde = { workspace = true, optional = true, features = [ "rc" ] }
+chrono = { workspace = true }
+chrono-tz = { workspace = true }
+indexmap = { workspace = true }
+serde = { workspace = true, optional = true }
