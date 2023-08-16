@@ -6,10 +6,26 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+
+default = [
+    "web",
+]
+
+web = [
+    "dioxus-web",
+    "dioxus-router/web",
+]
+
+desktop = [
+    "dioxus-desktop",
+]
+
 [dependencies]
-dioxus-desktop = { version = "0.4" }
-dioxus = { version = "0.4" }
-dioxus-router = { version = "0.4" }
+dioxus = { workspace = true }
+dioxus-router = { workspace = true }
+dioxus-desktop = { workspace = true, optional = true }
+dioxus-web = { workspace = true, optional = true }
 
 # Debug
 log = "0.4.19"

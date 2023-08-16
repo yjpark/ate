@@ -43,7 +43,7 @@ script = []
 # serve: [dev-server] only
 
 style = [
-    "dev/daisyui.css",
+    "dev/daisyui-3.5.1.css",
 ]
 
 script = [
