@@ -28,4 +28,4 @@ dashmap = { workspace = true }
 deref-derive = { workspace = true }
 edger_tree = { workspace = true, features = [ "dashmap" ]}
 serde = { workspace = true, optional = true, features = [ "rc" ] }
-getrandom = { workspace = true }
+getrandom = { workspace = true, features = [ "js" ] } # js feature for wasm target
