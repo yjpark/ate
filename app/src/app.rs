@@ -4,6 +4,7 @@ use dioxus::prelude::*;
 use ate_model::prelude::*;
 
 use crate::pages::home::view as Home;
+use crate::pages::entry::view as Entry;
 
 pub fn app(cx: Scope) -> Element {
     render!{
@@ -12,17 +13,9 @@ pub fn app(cx: Scope) -> Element {
 }
 
 #[derive(Clone, Routable, Debug, PartialEq)]
-enum Route {
+pub enum Route {
     #[route("/")]
     Home {},
     #[route("/entries/:id")]
     Entry { id: Uuid },
-}
-
-#[inline_props]
-fn Entry(cx: Scope, id: Uuid) -> Element {
-    render! {
-        Link { to: Route::Home {}, "Go to home" }
-        "ATE Entry: {id}"
-    }
 }
