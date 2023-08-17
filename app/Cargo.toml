@@ -22,6 +22,7 @@ desktop = [
 ]
 
 [dependencies]
+ate_model = { workspace = true }
 dioxus = { workspace = true }
 dioxus-router = { workspace = true }
 dioxus-desktop = { workspace = true, optional = true }
@@ -30,4 +31,3 @@ dioxus-web = { workspace = true, optional = true }
 # Debug
 log = "0.4.19"
 dioxus-logger = "0.4.1"
-

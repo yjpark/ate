@@ -19,7 +19,6 @@ serde = [
     "edger_tree/serde",
 ]
 
-
 [dependencies]
 ate_proto = { workspace = true }
 
@@ -29,3 +28,4 @@ dashmap = { workspace = true }
 deref-derive = { workspace = true }
 edger_tree = { workspace = true, features = [ "dashmap" ]}
 serde = { workspace = true, optional = true, features = [ "rc" ] }
+getrandom = { workspace = true }
