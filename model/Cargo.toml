@@ -14,8 +14,6 @@ repository.workspace = true
 serde = [
     "dep:serde",
     "ate_proto/serde",
-    "uuid/serde",
-    "dashmap/serde",
     "edger_tree/serde",
 ]
 
@@ -23,9 +21,7 @@ serde = [
 ate_proto = { workspace = true }
 
 tracing = { workspace = true }
-uuid = { workspace = true }
-dashmap = { workspace = true }
 deref-derive = { workspace = true }
 edger_tree = { workspace = true, features = [ "dashmap" ]}
-serde = { workspace = true, optional = true, features = [ "rc" ] }
+serde = { workspace = true, optional = true, features = [ "derive", "alloc" ] }
 getrandom = { workspace = true, features = [ "js" ] } # js feature for wasm target

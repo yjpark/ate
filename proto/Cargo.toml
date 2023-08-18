@@ -20,8 +20,8 @@ serde = [
 
 
 [dependencies]
-uuid = { workspace = true }
+uuid = { workspace = true, features = [ "v4", "fast-rng", "macro-diagnostics" ] }
 chrono = { workspace = true }
 chrono-tz = { workspace = true }
 indexmap = { workspace = true }
-serde = { workspace = true, optional = true }
+serde = { workspace = true, optional = true, features = [ "rc", "derive", "alloc" ] }
