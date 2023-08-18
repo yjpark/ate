@@ -8,7 +8,8 @@ repository = "https://github.com/edger-dev/ate"
 members = [
     "proto",
     "model",
-    "app",
+    "crux",
+    "dioxus",
 ]
 exclude = [
 ]
