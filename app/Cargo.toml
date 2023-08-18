@@ -1,5 +1,5 @@
 [package]
-name = "ate_dioxus"
+name = "ate"
 version = "0.1.0"
 authors = ["YJ Park <yjpark@gmail.com>"]
 edition = "2021"

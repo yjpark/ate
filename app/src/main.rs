@@ -1,5 +1,5 @@
 use log::LevelFilter;
-use ate_dioxus::app::app;
+use ate::app::app;
 
 #[cfg(feature = "desktop")]
 fn main() {
