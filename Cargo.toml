@@ -43,7 +43,10 @@ blake3 = "1.3.3"
 getrandom = "0.2"
 
 # crux
-crux = "0.6.3"
+crux_core = "0.6.3"
+crux_macros = "0.3.2"
+
+lazy_static = "1.4.0"
 
 # dioxus app
 dioxus-daisyui = "0.4.0"
