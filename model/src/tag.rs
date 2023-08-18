@@ -1,6 +1,6 @@
 use std::sync::{Weak, Arc};
 
-use uuid::Uuid;
+use ate_proto::prelude::Uuid;
 use deref_derive::Deref;
 
 use edger_tree::dashmap::DashTree;

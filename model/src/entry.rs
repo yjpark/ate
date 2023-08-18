@@ -1,7 +1,7 @@
 use std::sync::Weak;
 
-use uuid::Uuid;
-use dashmap::DashMap;
+use ate_proto::prelude::Uuid;
+use edger_tree::prelude::DashMap;
 use edger_tree::prelude::Identifiable;
 
 use crate::prelude::Tag;
