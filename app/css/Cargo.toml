@@ -1,0 +1,19 @@
+[package]
+name = "ate_app_css"
+version = "0.1.0"
+publish = false
+
+edition = { workspace = true }
+license = { workspace = true }
+homepage = { workspace = true }
+repository = { workspace = true }
+authors = { workspace = true }
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+
+[build-dependencies]
+dioxus-daisyui = { workspace = true }
+
+[dependencies]

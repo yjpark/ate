@@ -3,21 +3,36 @@ edition = "2021"
 license = "MIT"
 homepage = "https://github.com/edger-dev/ate"
 repository = "https://github.com/edger-dev/ate"
+authors = ["YJ Park <yjpark@gmail.com>"]
 
 [workspace]
 members = [
     "proto",
     "model",
+    "app",
+    "app/css",
 ]
 exclude = [
 ]
 
 [workspace.dependencies]
-ate_proto = { path = "proto", version = "0.1.0" }
-ate_model = { path = "model", version = "0.1.0" }
+ate_proto = { path = "proto" }
+ate_model = { path = "model" }
+ate_app = { path = "app" }
 
 edger_tree = { path = "../crates/common/tree" }
-dioxus-daisyui = "0.4.0"
+dioxus-daisyui = "0.7.0"
+
+dioxus = "0.5.0"
+
+reqwest = "0.12.3"
+async-recursion = "1.1.0"
+futures = "0.3.30"
+
+dioxus-free-icons = { version = "0.8", features = ["feather"] }
+
+# dx serve produce an error without this.
+getrandom = { version = "0.2", features=["wasm-bindgen", "js"] }
 
 clap = { version = "4.1.14", features = [ "derive" ] }
 tokio = { version = "1", features = [ "full" ] }
@@ -37,6 +52,8 @@ chrono-tz = { version = "0.8.3" }
 indexmap = { version = "2.0.0" }
 dashmap = { version = "5.5.0" }
 secrecy = { version = "0.8.0" }
-snafu = "0.7.4"
+snafu = "0.8.2"
 async-trait = "0.1.64"
 blake3 = { version = "1.3.3", features = [ "rayon" ]}
+
+sea-orm = { version = "1.0", features = [ "sqlx-postgres", "runtime-tokio-rustls", "macros", "with_chrono", "with_uuid" ] }

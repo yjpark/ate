@@ -1,5 +1,5 @@
 {
-  description = "tag";
+  description = "ate";
 
   inputs = {
     nixpkgs.url      = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -32,13 +32,13 @@
             openssl
             # utility
             just
+            simple-http-server 
             # evcxr
             # node tools
             nodejs
             nodePackages.npm
             nodePackages.tailwindcss
             # backend tools
-            surrealdb
           ];
           shellHook = ''
             alias c=cargo
