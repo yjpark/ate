@@ -7,6 +7,6 @@ use crate::prelude::{Uuid, LeafTag};
 pub struct Entry {
     pub id: Uuid,
     pub tags: IndexMap<Uuid, LeafTag>,
-    pub aged: IndexMap<Uuid, String>,
+    pub aged: IndexMap<String, String>,
     pub memo: String,
 }
