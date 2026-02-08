@@ -3,6 +3,7 @@ pub use uuid;
 pub mod age;
 pub mod tag;
 pub mod entry;
+pub mod file;
 
 pub mod prelude {
     #[doc(hidden)]
@@ -16,4 +17,7 @@ pub mod prelude {
 
     #[doc(hidden)]
     pub use crate::entry::Entry;
+
+    #[doc(hidden)]
+    pub use crate::file::{Error as FileError, Result as FileResult};
 }

@@ -10,6 +10,7 @@ repository.workspace = true
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [features]
+default = ["serde", "json"]
 serde = [
     "dep:serde",
     "uuid/serde",
@@ -17,7 +18,7 @@ serde = [
     "chrono-tz/serde",
     "indexmap/serde",
 ]
-
+json = ["serde", "dep:serde_json"]
 
 [dependencies]
 uuid = { workspace = true }
@@ -25,3 +26,5 @@ chrono = { workspace = true }
 chrono-tz = { workspace = true }
 indexmap = { workspace = true }
 serde = { workspace = true, optional = true }
+serde_json = { workspace = true, optional = true }
+snafu = { workspace = true }
