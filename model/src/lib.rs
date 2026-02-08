@@ -3,6 +3,15 @@ pub use edger_tree;
 
 pub mod tag;
 pub mod entry;
+pub mod loader;
+pub mod converter;
+pub mod database;
+
+#[cfg(test)]
+mod mock;
+
+#[cfg(test)]
+mod lib_test;
 
 pub mod prelude {
     pub use ate_proto::prelude::{*,
@@ -15,4 +24,7 @@ pub mod prelude {
 
     #[doc(hidden)]
     pub use crate::entry::Entry;
+
+    #[doc(hidden)]
+    pub use crate::database::Database;
 }

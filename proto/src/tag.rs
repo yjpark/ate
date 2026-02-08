@@ -10,6 +10,16 @@ pub enum Tag {
     Leaf(LeafTag),
 }
 
+impl Tag {
+    /// Get the ID of this tag
+    pub fn id(&self) -> Uuid {
+        match self {
+            Tag::Group(group) => group.id,
+            Tag::Leaf(leaf) => leaf.id,
+        }
+    }
+}
+
 #[derive(Debug, Clone)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct GroupTag {
